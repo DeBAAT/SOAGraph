@@ -171,10 +171,13 @@ must be added to the file LocalSettings.php below the inclusion of the [http://w
 
 == Example data shown using soagraph format ==
 
-[File:Example_SOAGraph.png|center|100px|caption]
+[https://github.com/JdBAlten/SOAGraph/blob/master/Example_SOAGraph.png|center|100px|caption]
+
+This image only shows the services related to the start node '''Service/Regeling_Klok/1'''.
 
 == Same example data shown using graph format ==
 
-[File:Example_Graph.png|center|100px|caption]
+[https://github.com/JdBAlten/SOAGraph/blob/master/Example_Graph.png|center|100px|caption]
 
+This image shows all services available in the wiki.
 
