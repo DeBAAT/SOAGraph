@@ -14,12 +14,13 @@ Alternative or extension to Graph SemanticResultFormats
 | categories=graph
 | description=Displays the relation between SOA services
 }}
-This is an example page for the [http://www.semantic-mediawiki.org/wiki/Help:Result_formats result format] '''soagraph''', part of the [http://www.semantic-mediawiki.org/wiki/Semantic_Result_Formats Semantic Result Formats] extension, which can be used to display result values as a graph showing the relation between services in a Service Oriented Architecture (SOA). In order to work the [http://www.semantic-mediawiki.org/wiki/GraphViz GraphViz] extension is required to be installed, too.
+This is an example page for the [result format](http://www.semantic-mediawiki.org/wiki/Help:Result_formats) _soagraph_, part of the [Semantic Result Formats](http://www.semantic-mediawiki.org/wiki/Semantic_Result_Formats) extension, which can be used to display result values as a graph showing the relation between services in a Service Oriented Architecture (SOA). In order to work the [GraphViz](http://www.semantic-mediawiki.org/wiki/GraphViz) extension is required to be installed, too.
 
-This [http://www.semantic-mediawiki.org/wiki/Help:Result_formats result format] '''soagraph''' works similarly to the [http://http://www.semantic-mediawiki.org/wiki/Help:Graph_format '''graph'''] format in displaying a network of nodes. The main difference is that the '''soagraph''' format offers the option to define a number of start nodes. The resulting graph then only shows those network elements which have a relation with one of these start nodes. Each node can have one or more child relations defined with other nodes using a named node property. The name of the property defining the relation can be specified in the parameter '''columnTo'''. When building the graph to show, the tree is traversed both upwards and downwards. More parameters are shown in the table below.
+This [result format](http://www.semantic-mediawiki.org/wiki/Help:Result_formats) _soagraph_ works similarly to the [_graph_](http://www.semantic-mediawiki.org/wiki/Help:Graph_format) format in displaying a network of nodes. The main difference is that the _soagraph_ format offers the option to define a number of start nodes. The resulting graph then only shows those network elements which have a relation with one of these start nodes. Each node can have one or more child relations defined with other nodes using a named node property. The name of the property defining the relation can be specified in the parameter _columnTo_. When building the graph to show, the tree is traversed both upwards and downwards. More parameters are shown in the table below.
 
 
-== Parameters ==
+Parameters
+----------
 <!-- This is an auto-generated table of parameter descriptions that displays up to date docs for the installed version of SMW. Do not attempt to modify or translate in-wiki. For more info contact User:Jeroen De Dauw {{#smwdoc:graph}} -->
 
 {| class="wikitable sortable"
@@ -145,39 +146,44 @@ This [http://www.semantic-mediawiki.org/wiki/Help:Result_formats result format] 
 | If this parameter contains any value, the output shows the text used to define the graph
 |}
 
-== Example ==
-<pre>{{#ask:format=soagraph
-  | graphsize={{{size|8.3,11.7}}}
-  | columnTo=Service Afhankelijkheid
-  | startNodes=Service/Regeling_Klok/1
-  | startFillColor=#ff8030
-  | startColor=black
-  | startShape=oval
-  | columnShape=Rol
-  | shapeMap=FE=triangle,FEA=box,CS=box,BEA=box,BE=invtriangle
-  | columnlabel=Service Fullname
-  | limit=10000
-  | [[Category:Service]]
-  | ?Service Fullname
-  | ?Service Afhankelijkheid
-  | ?Rol
-  | ?Status
-}}</pre>
+Example
+-------
 
-== Enabling ==
+    {{#ask:format=soagraph
+      | graphsize={{{size|8.3,11.7}}}
+      | columnTo=Service Afhankelijkheid
+      | startNodes=Service/Regeling_Klok/1
+      | startFillColor=#ff8030
+      | startColor=black
+      | startShape=oval
+      | columnShape=Rol
+      | shapeMap=FE=triangle,FEA=box,CS=box,BEA=box,BE=invtriangle
+      | columnlabel=Service Fullname
+      | limit=10000
+      | [[Category:Service]]
+      | ?Service Fullname
+      | ?Service Afhankelijkheid
+      | ?Rol
+      | ?Status
+    }}
+
+Enabling
+--------
 This result format is not enabled by default on a wiki. To enable it the line 
-<pre lang="php">$srfgFormats[] = 'soagraph';</pre>
-must be added to the file LocalSettings.php below the inclusion of the [http://www.semantic-mediawiki.org/wiki/Semantic_Result_Formats Semantic Result Formats] extension.
+    <pre lang="php">$srfgFormats[] = 'soagraph';</pre>
+must be added to the file LocalSettings.php below the inclusion of the [Semantic Result Formats](http://www.semantic-mediawiki.org/wiki/Semantic_Result_Formats) extension.
 
-== Example data shown using soagraph format ==
+Example data shown using soagraph format
+----------------------------------------
 
-[https://github.com/JdBAlten/SOAGraph/blob/master/Example_SOAGraph.png|center|100px|caption]
+![Example_SOAGraph](https://github.com/JdBAlten/SOAGraph/blob/master/Example_SOAGraph.png)
 
-This image only shows the services related to the start node '''Service/Regeling_Klok/1'''.
+This image only shows the services related to the start node _Service/Regeling_Klok/1_.
 
-== Same example data shown using graph format ==
+Same example data shown using graph format
+------------------------------------------
 
-[https://github.com/JdBAlten/SOAGraph/blob/master/Example_Graph.png|center|100px|caption]
+[Example_Graph](https://github.com/JdBAlten/SOAGraph/blob/master/Example_Graph.png)
 
 This image shows all services available in the wiki.
 
