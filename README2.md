@@ -1,0 +1,189 @@
+SOAGraph
+========
+
+Alternative or extension to Graph SemanticResultFormats
+
+{{Result format
+| format name=soagraph
+| authors=Jan de Baat, Alten PTS
+| minimum version=1.7
+| maximum version=still supported
+| further reqs=GraphViz
+| component=Semantic Result Formats
+| is enabled=no
+| categories=graph
+| description=Displays the relation between SOA services
+}}
+This is an example page for the [result format](http://www.semantic-mediawiki.org/wiki/Help:Result_formats) _soagraph_, part of the [Semantic Result Formats](http://www.semantic-mediawiki.org/wiki/Semantic_Result_Formats) extension, which can be used to display result values as a graph showing the relation between services in a Service Oriented Architecture (SOA). In order to work the [GraphViz](http://www.semantic-mediawiki.org/wiki/GraphViz) extension is required to be installed, too.
+
+This [result format](http://www.semantic-mediawiki.org/wiki/Help:Result_formats) _soagraph_ works similarly to the [_graph_](http://www.semantic-mediawiki.org/wiki/Help:Graph_format) format in displaying a network of nodes. The main difference is that the _soagraph_ format offers the option to define a number of start nodes. The resulting graph then only shows those network elements which have a relation with one of these start nodes. Each node can have one or more child relations defined with other nodes using a named node property. The name of the property defining the relation can be specified in the parameter _columnTo_. When building the graph to show, the tree is traversed both upwards and downwards. More parameters are shown in the table below.
+
+
+Parameters
+----------
+<!-- This is an auto-generated table of parameter descriptions that displays up to date docs for the installed version of SMW. Do not attempt to modify or translate in-wiki. For more info contact User:Jeroen De Dauw {{#smwdoc:graph}} -->
+
+{| class="wikitable sortable"
+|-
+! Parameter
+! Type 
+! Default 
+! Notes
+|-
+| graphName
+| String
+| QueryResult
+| Names the graph
+|-
+| graphSize
+| [http://www.graphviz.org/content/attrs-test#kpointf pointf]
+| ''none''
+| Specifies the size of the graph
+|-
+| startColor
+| [http://www.graphviz.org/doc/info/colors.html color]
+| yellow
+| The [http://www.graphviz.org/doc/info/colors.html color] of the nodes defined as starting point for the tree
+|-
+| arrowDirection
+| LR,RL,TB or BT
+| LR
+| Specifies the direction of the graph L=left,R=right,T=top,B=bottom
+|-
+| nodeShape
+| [http://www.graphviz.org/doc/info/shapes.html shape]
+| ''none''
+| Sets the shape of graph nodes. Allowed values: box, box3d, circle, component, diamond, doublecircle, doubleoctagon, egg, ellipse, folder, hexagon, house, invhouse, invtrapezium, invtriangle, Mcircle, Mdiamond, Msquare, none, note, octagon, parallelogram, pentagon , plaintext, point, polygon, rect, rectangle, septagon, square, tab, trapezium, triangle, tripleoctagon
+|-
+| columnTo
+| text
+| ''none''
+| The name of the property containing a reference to the child of this node
+|-
+| startNodes
+| text
+| ''none''
+| The names of the nodes defined as starting point for the tree
+|-
+| columnFillColor
+| text
+| ''none''
+| The property used to define the fill [http://www.graphviz.org/doc/info/colors.html color] of this node
+|-
+| fillColorMap
+| text
+| ''none''
+| A comma-separated list of "<value>=[http://www.graphviz.org/doc/info/colors.html color]" pairs used to define the fill color of a node with that property defined. Properties may look like this "fillColorMap=design=gray,test=gray,production=green"
+|-
+| columnFontColor
+| text
+| ''none''
+| The name of the property used to define the font [http://www.graphviz.org/doc/info/colors.html color] of this node
+|-
+| fontColorMap
+| text
+| ''none''
+| A comma-separated list of "<value>=[http://www.graphviz.org/doc/info/colors.html color]" pairs used to define the font color of a node with that property defined. Properties may look like this "fontColorMap=design=gray,test=gray,production=green"
+|-
+| defaultFillColor
+| [http://www.graphviz.org/doc/info/colors.html color]
+| ''none''
+| The default fill [http://www.graphviz.org/doc/info/colors.html color] of a node when none of the defined property values match
+|-
+| defaultFontColor
+| [http://www.graphviz.org/doc/info/colors.html color]
+| ''none''
+| The default font [http://www.graphviz.org/doc/info/colors.html color] of a node when none of the defined property values match
+|-
+| defaultShape
+| [http://www.graphviz.org/doc/info/shapes.html shape]
+| ''none''
+| The default [http://www.graphviz.org/doc/info/shapes.html shape] of a node when none of the defined property values match
+|-
+| columnColor
+| text
+| ''none''
+| The name of the property containing the value to define the [http://www.graphviz.org/doc/info/colors.html color] of this node
+|-
+| colorMap
+| text
+| ''none''
+| A comma-separated list of "<value>=[http://www.graphviz.org/doc/info/colors.html color]" pairs used to define the color of a node with that property defined. Properties may look like this "colorMap=design=gray,test=gray,production=green"
+|-
+| startFillColor
+| [http://www.graphviz.org/doc/info/colors.html color]
+| ''#ffffff''
+| The fill [http://www.graphviz.org/doc/info/colors.html color] of the nodes defined as starting point for the tree
+|-
+| startFontColor
+| [http://www.graphviz.org/doc/info/colors.html color]
+| ''#ffffff''
+| The font [http://www.graphviz.org/doc/info/colors.html color] of the nodes defined as starting point for the tree
+|-
+| startColor
+| [http://www.graphviz.org/doc/info/colors.html color]
+| ''#0000aa''
+| The [http://www.graphviz.org/doc/info/colors.html color] of the nodes defined as starting point for the tree
+|-
+| startShape
+| [http://www.graphviz.org/doc/info/shapes.html shape]
+| ''shape=box''
+| The [http://www.graphviz.org/doc/info/shapes.html shape] of the nodes defined as starting point for the tree
+|-
+| columnShape
+| text
+| ''none''
+| The name of the property containing the value to define the [http://www.graphviz.org/doc/info/shapes.html shape] of this node
+|-
+| shapeMap
+| text
+| ''none''
+| A comma-separated list of "<value>=[http://www.graphviz.org/doc/info/shapes.html shape]" pairs used to define the shape of a node with that property defined. Properties may look like this "shapemap=FE=triangle,FEA=box"
+|-
+| debug
+| text
+| ''none''
+| If this parameter contains any value, the output shows the text used to define the graph
+|}
+
+Example
+-------
+
+    {{#ask:format=soagraph
+      | graphsize={{{size|8.3,11.7}}}
+      | columnTo=Service Afhankelijkheid
+      | startNodes=Service/Regeling_Klok/1
+      | startFillColor=#ff8030
+      | startColor=black
+      | startShape=oval
+      | columnShape=Rol
+      | shapeMap=FE=triangle,FEA=box,CS=box,BEA=box,BE=invtriangle
+      | columnlabel=Service Fullname
+      | limit=10000
+      | [[Category:Service]]
+      | ?Service Fullname
+      | ?Service Afhankelijkheid
+      | ?Rol
+      | ?Status
+    }}
+
+Enabling
+--------
+This result format is not enabled by default on a wiki. To enable it the line 
+    <pre lang="php">$srfgFormats[] = 'soagraph';</pre>
+must be added to the file LocalSettings.php below the inclusion of the [Semantic Result Formats](http://www.semantic-mediawiki.org/wiki/Semantic_Result_Formats) extension.
+
+Example data shown using soagraph format
+----------------------------------------
+
+![Example_SOAGraph](https://github.com/JdBAlten/SOAGraph/blob/master/Example_SOAGraph.png)
+
+This image only shows the services related to the start node _Service/Regeling_Klok/1_.
+
+Same example data shown using graph format
+------------------------------------------
+
+[Example_Graph](https://github.com/JdBAlten/SOAGraph/blob/master/Example_Graph.png)
+
+This image shows all services available in the wiki.
+
