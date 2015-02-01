@@ -5,7 +5,7 @@ Alternative or extension to Graph SemanticResultFormats
 
 {{Result format
 | format name=soagraph
-| authors=Jan de Baat, Alten PTS
+| authors=DeBAAT
 | minimum version=1.7
 | maximum version=still supported
 | further reqs=GraphViz
@@ -176,14 +176,14 @@ must be added to the file LocalSettings.php below the inclusion of the [Semantic
 Example data shown using soagraph format
 ----------------------------------------
 
-![Example_SOAGraph](https://github.com/JdBAlten/SOAGraph/blob/master/Example_SOAGraph.png)
+![Example_SOAGraph](https://github.com/DeBAAT/SOAGraph/blob/master/Example_SOAGraph.png)
 
 This image only shows the services related to the start node _Service/Regeling_Klok/1_.
 
 Same example data shown using graph format
 ------------------------------------------
 
-[Example_Graph](https://github.com/JdBAlten/SOAGraph/blob/master/Example_Graph.png)
+[Example_Graph](https://github.com/DeBAAT/SOAGraph/blob/master/Example_Graph.png)
 
 This image shows all services available in the wiki.
 

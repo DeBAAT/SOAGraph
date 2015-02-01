@@ -3,7 +3,7 @@
 *	This file contains the SOAGraph Printer for SemanticResultFormats
 *   (https://www.mediawiki.org/wiki/Extension:Semantic_Result_Formats)
 *
-*	Copyright (c) 2013 Jan de Baat - Alten PTS
+*	Copyright (c) 2015 Jan de Baat - De B.A.A.T.
 *
 *   SOAGraph Printer is free software: you can redistribute it and/or modify
 *   it under the terms of the GNU General Public License as published by
@@ -12,7 +12,7 @@
 *
 *   SOAGraph Printer is distributed in the hope that it will be useful,
 *   but WITHOUT ANY WARRANTY; without even the implied warranty of
-*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 *   GNU General Public License for more details.
 *
 *   You should have received a copy of the GNU General Public License
@@ -43,7 +43,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
  * This code is based on the code in SRF_Boilerplate.php and SRF_Graph.php
  * 
  * @file SRF_SOAGraph.php
- * @author Jan de Baat < jan.de.baat@alten.nl >
+ * @author DeBAAT < SOAGraph@de-baat.nl >
  * @ingroup SemanticResultFormats
  *
  * @since 1.8
